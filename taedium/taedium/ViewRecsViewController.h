@@ -1,5 +1,5 @@
 //
-//  TaediumFirstViewController.h
+//  ViewRecsViewController.h
 //  taedium
 //
 //  Created by Jason Voll on 10/18/11.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TaediumFirstViewController : UIViewController
+@interface ViewRecsViewController : UIViewController
 
 @end

@@ -1,5 +1,5 @@
 //
-//  TaediumSecondViewController.h
+//  AccountViewController.h
 //  taedium
 //
 //  Created by Jason Voll on 10/18/11.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TaediumSecondViewController : UIViewController
+@interface AccountViewController : UIViewController
 
 @end

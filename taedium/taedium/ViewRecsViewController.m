@@ -1,14 +1,14 @@
 //
-//  TaediumFirstViewController.m
+//  ViewRecsViewController.m
 //  taedium
 //
 //  Created by Jason Voll on 10/18/11.
 //  Copyright (c) 2011 Mozilla. All rights reserved.
 //
 
-#import "TaediumFirstViewController.h"
+#import "ViewRecsViewController.h"
 
-@implementation TaediumFirstViewController
+@implementation ViewRecsViewController
 
 - (void)didReceiveMemoryWarning
 {

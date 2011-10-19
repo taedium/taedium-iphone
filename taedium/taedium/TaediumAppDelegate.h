@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TaediumAppDelegate : UIResponder <UIApplicationDelegate>
+@interface TaediumAppDelegate : UIResponder <UIApplicationDelegate> {
+    IBOutlet UITabBarController*  mainTabBarController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
