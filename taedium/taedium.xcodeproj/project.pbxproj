@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96E56805144E71B80008C755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56804144E71B80008C755 /* UIKit.framework */; };
+		96E56807144E71B80008C755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56806144E71B80008C755 /* Foundation.framework */; };
+		96E56809144E71B80008C755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56808144E71B80008C755 /* CoreGraphics.framework */; };
+		96E5680F144E71B80008C755 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E5680D144E71B80008C755 /* InfoPlist.strings */; };
+		96E56811144E71B80008C755 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E56810144E71B80008C755 /* main.m */; };
+		96E56815144E71B80008C755 /* TaediumAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E56814144E71B80008C755 /* TaediumAppDelegate.m */; };
+		96E56818144E71B80008C755 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E56816144E71B80008C755 /* MainStoryboard.storyboard */; };
+		96E5681B144E71B80008C755 /* TaediumFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5681A144E71B80008C755 /* TaediumFirstViewController.m */; };
+		96E5681D144E71B80008C755 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E5681C144E71B80008C755 /* first.png */; };
+		96E5681F144E71B80008C755 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E5681E144E71B80008C755 /* first@2x.png */; };
+		96E56822144E71B80008C755 /* TaediumSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E56821144E71B80008C755 /* TaediumSecondViewController.m */; };
+		96E56824144E71B80008C755 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E56823144E71B80008C755 /* second.png */; };
+		96E56826144E71B80008C755 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E56825144E71B80008C755 /* second@2x.png */; };
+		96E5682E144E71B80008C755 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E5682D144E71B80008C755 /* SenTestingKit.framework */; };
+		96E5682F144E71B80008C755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56804144E71B80008C755 /* UIKit.framework */; };
+		96E56830144E71B80008C755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56806144E71B80008C755 /* Foundation.framework */; };
+		96E56838144E71B80008C755 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E56836144E71B80008C755 /* InfoPlist.strings */; };
+		96E5683B144E71B80008C755 /* taediumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5683A144E71B80008C755 /* taediumTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96E56831144E71B80008C755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96E567F7144E71B80008C755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96E567FF144E71B80008C755;
+			remoteInfo = taedium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96E56800144E71B80008C755 /* taedium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taedium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E56804144E71B80008C755 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96E56806144E71B80008C755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96E56808144E71B80008C755 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96E5680C144E71B80008C755 /* taedium-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "taedium-Info.plist"; sourceTree = "<group>"; };
+		96E5680E144E71B80008C755 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96E56810144E71B80008C755 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96E56812144E71B80008C755 /* taedium-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "taedium-Prefix.pch"; sourceTree = "<group>"; };
+		96E56813144E71B80008C755 /* TaediumAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaediumAppDelegate.h; sourceTree = "<group>"; };
+		96E56814144E71B80008C755 /* TaediumAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaediumAppDelegate.m; sourceTree = "<group>"; };
+		96E56817144E71B80008C755 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		96E56819144E71B80008C755 /* TaediumFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaediumFirstViewController.h; sourceTree = "<group>"; };
+		96E5681A144E71B80008C755 /* TaediumFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaediumFirstViewController.m; sourceTree = "<group>"; };
+		96E5681C144E71B80008C755 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		96E5681E144E71B80008C755 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		96E56820144E71B80008C755 /* TaediumSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaediumSecondViewController.h; sourceTree = "<group>"; };
+		96E56821144E71B80008C755 /* TaediumSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaediumSecondViewController.m; sourceTree = "<group>"; };
+		96E56823144E71B80008C755 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		96E56825144E71B80008C755 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		96E5682C144E71B80008C755 /* taediumTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taediumTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E5682D144E71B80008C755 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		96E56835144E71B80008C755 /* taediumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "taediumTests-Info.plist"; sourceTree = "<group>"; };
+		96E56837144E71B80008C755 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96E56839144E71B80008C755 /* taediumTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = taediumTests.h; sourceTree = "<group>"; };
+		96E5683A144E71B80008C755 /* taediumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = taediumTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96E567FD144E71B80008C755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E56805144E71B80008C755 /* UIKit.framework in Frameworks */,
+				96E56807144E71B80008C755 /* Foundation.framework in Frameworks */,
+				96E56809144E71B80008C755 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96E56828144E71B80008C755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E5682E144E71B80008C755 /* SenTestingKit.framework in Frameworks */,
+				96E5682F144E71B80008C755 /* UIKit.framework in Frameworks */,
+				96E56830144E71B80008C755 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96E567F5144E71B80008C755 = {
+			isa = PBXGroup;
+			children = (
+				96E5680A144E71B80008C755 /* taedium */,
+				96E56833144E71B80008C755 /* taediumTests */,
+				96E56803144E71B80008C755 /* Frameworks */,
+				96E56801144E71B80008C755 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96E56801144E71B80008C755 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96E56800144E71B80008C755 /* taedium.app */,
+				96E5682C144E71B80008C755 /* taediumTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96E56803144E71B80008C755 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96E56804144E71B80008C755 /* UIKit.framework */,
+				96E56806144E71B80008C755 /* Foundation.framework */,
+				96E56808144E71B80008C755 /* CoreGraphics.framework */,
+				96E5682D144E71B80008C755 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96E5680A144E71B80008C755 /* taedium */ = {
+			isa = PBXGroup;
+			children = (
+				96E56813144E71B80008C755 /* TaediumAppDelegate.h */,
+				96E56814144E71B80008C755 /* TaediumAppDelegate.m */,
+				96E56816144E71B80008C755 /* MainStoryboard.storyboard */,
+				96E56819144E71B80008C755 /* TaediumFirstViewController.h */,
+				96E5681A144E71B80008C755 /* TaediumFirstViewController.m */,
+				96E5681C144E71B80008C755 /* first.png */,
+				96E5681E144E71B80008C755 /* first@2x.png */,
+				96E56820144E71B80008C755 /* TaediumSecondViewController.h */,
+				96E56821144E71B80008C755 /* TaediumSecondViewController.m */,
+				96E56823144E71B80008C755 /* second.png */,
+				96E56825144E71B80008C755 /* second@2x.png */,
+				96E5680B144E71B80008C755 /* Supporting Files */,
+			);
+			path = taedium;
+			sourceTree = "<group>";
+		};
+		96E5680B144E71B80008C755 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96E5680C144E71B80008C755 /* taedium-Info.plist */,
+				96E5680D144E71B80008C755 /* InfoPlist.strings */,
+				96E56810144E71B80008C755 /* main.m */,
+				96E56812144E71B80008C755 /* taedium-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96E56833144E71B80008C755 /* taediumTests */ = {
+			isa = PBXGroup;
+			children = (
+				96E56839144E71B80008C755 /* taediumTests.h */,
+				96E5683A144E71B80008C755 /* taediumTests.m */,
+				96E56834144E71B80008C755 /* Supporting Files */,
+			);
+			path = taediumTests;
+			sourceTree = "<group>";
+		};
+		96E56834144E71B80008C755 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96E56835144E71B80008C755 /* taediumTests-Info.plist */,
+				96E56836144E71B80008C755 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96E567FF144E71B80008C755 /* taedium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96E5683E144E71B80008C755 /* Build configuration list for PBXNativeTarget "taedium" */;
+			buildPhases = (
+				96E567FC144E71B80008C755 /* Sources */,
+				96E567FD144E71B80008C755 /* Frameworks */,
+				96E567FE144E71B80008C755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = taedium;
+			productName = taedium;
+			productReference = 96E56800144E71B80008C755 /* taedium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96E5682B144E71B80008C755 /* taediumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96E56841144E71B80008C755 /* Build configuration list for PBXNativeTarget "taediumTests" */;
+			buildPhases = (
+				96E56827144E71B80008C755 /* Sources */,
+				96E56828144E71B80008C755 /* Frameworks */,
+				96E56829144E71B80008C755 /* Resources */,
+				96E5682A144E71B80008C755 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96E56832144E71B80008C755 /* PBXTargetDependency */,
+			);
+			name = taediumTests;
+			productName = taediumTests;
+			productReference = 96E5682C144E71B80008C755 /* taediumTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96E567F7144E71B80008C755 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Mozilla;
+			};
+			buildConfigurationList = 96E567FA144E71B80008C755 /* Build configuration list for PBXProject "taedium" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96E567F5144E71B80008C755;
+			productRefGroup = 96E56801144E71B80008C755 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96E567FF144E71B80008C755 /* taedium */,
+				96E5682B144E71B80008C755 /* taediumTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96E567FE144E71B80008C755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E5680F144E71B80008C755 /* InfoPlist.strings in Resources */,
+				96E56818144E71B80008C755 /* MainStoryboard.storyboard in Resources */,
+				96E5681D144E71B80008C755 /* first.png in Resources */,
+				96E5681F144E71B80008C755 /* first@2x.png in Resources */,
+				96E56824144E71B80008C755 /* second.png in Resources */,
+				96E56826144E71B80008C755 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96E56829144E71B80008C755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E56838144E71B80008C755 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96E5682A144E71B80008C755 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96E567FC144E71B80008C755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E56811144E71B80008C755 /* main.m in Sources */,
+				96E56815144E71B80008C755 /* TaediumAppDelegate.m in Sources */,
+				96E5681B144E71B80008C755 /* TaediumFirstViewController.m in Sources */,
+				96E56822144E71B80008C755 /* TaediumSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96E56827144E71B80008C755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E5683B144E71B80008C755 /* taediumTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96E56832144E71B80008C755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96E567FF144E71B80008C755 /* taedium */;
+			targetProxy = 96E56831144E71B80008C755 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96E5680D144E71B80008C755 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96E5680E144E71B80008C755 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96E56816144E71B80008C755 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96E56817144E71B80008C755 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		96E56836144E71B80008C755 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96E56837144E71B80008C755 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96E5683C144E71B80008C755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96E5683D144E71B80008C755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96E5683F144E71B80008C755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "taedium/taedium-Prefix.pch";
+				INFOPLIST_FILE = "taedium/taedium-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96E56840144E71B80008C755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "taedium/taedium-Prefix.pch";
+				INFOPLIST_FILE = "taedium/taedium-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		96E56842144E71B80008C755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/taedium.app/taedium";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "taedium/taedium-Prefix.pch";
+				INFOPLIST_FILE = "taediumTests/taediumTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		96E56843144E71B80008C755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/taedium.app/taedium";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "taedium/taedium-Prefix.pch";
+				INFOPLIST_FILE = "taediumTests/taediumTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96E567FA144E71B80008C755 /* Build configuration list for PBXProject "taedium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96E5683C144E71B80008C755 /* Debug */,
+				96E5683D144E71B80008C755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96E5683E144E71B80008C755 /* Build configuration list for PBXNativeTarget "taedium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96E5683F144E71B80008C755 /* Debug */,
+				96E56840144E71B80008C755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96E56841144E71B80008C755 /* Build configuration list for PBXNativeTarget "taediumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96E56842144E71B80008C755 /* Debug */,
+				96E56843144E71B80008C755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96E567F7144E71B80008C755 /* Project object */;
+}
