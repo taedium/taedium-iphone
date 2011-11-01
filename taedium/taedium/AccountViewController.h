@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AccountViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *tfUsername;
+@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
+@property (weak, nonatomic) IBOutlet UIButton *btLogin;
+
+- (IBAction)login:(id)sender;
 
 @end

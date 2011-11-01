@@ -7,8 +7,12 @@
 //
 
 #import "AccountViewController.h"
+#import "Account.h"
 
 @implementation AccountViewController
+@synthesize tfUsername;
+@synthesize tfPassword;
+@synthesize btLogin;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +50,9 @@
 
 - (void)viewDidUnload
 {
+    [self setTfUsername:nil];
+    [self setTfPassword:nil];
+    [self setBtLogin:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -57,4 +64,30 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)login:(id)sender {
+    // TODO assign a member variable (Account), make it persist in the app,
+    // use actual data from the form
+    NSString *username = [tfUsername text];
+    NSString *password = [tfPassword text];
+    Account* account = [[Account alloc] initWithUsername:username password:password email: @"me@you.com"];
+    if ([account loginAccount]) {
+        printf("login succeeded");
+    } else {
+        printf("login failed");
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.tfUsername) {
+        [self.tfPassword becomeFirstResponder];
+    }
+    else if (textField == self.tfPassword) {
+        [textField resignFirstResponder];
+        [self login:(self)];
+    }
+    else {
+        [textField resignFirstResponder];
+    }
+    return NO;
+}
 @end

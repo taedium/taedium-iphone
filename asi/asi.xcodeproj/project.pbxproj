@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		969A56F6145A5F93007DBBDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969A56F5145A5F93007DBBDB /* UIKit.framework */; };
+		969A56F8145A5F93007DBBDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969A56F7145A5F93007DBBDB /* Foundation.framework */; };
+		969A56FA145A5F93007DBBDB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969A56F9145A5F93007DBBDB /* CoreGraphics.framework */; };
+		969A5700145A5F93007DBBDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 969A56FE145A5F93007DBBDB /* InfoPlist.strings */; };
+		969A5702145A5F93007DBBDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 969A5701145A5F93007DBBDB /* main.m */; };
+		969A5706145A5F93007DBBDB /* TaediumAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 969A5705145A5F93007DBBDB /* TaediumAppDelegate.m */; };
+		969A5709145A5F93007DBBDB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969A5707145A5F93007DBBDB /* MainStoryboard.storyboard */; };
+		969A570C145A5F93007DBBDB /* TaediumFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969A570B145A5F93007DBBDB /* TaediumFirstViewController.m */; };
+		969A570E145A5F93007DBBDB /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 969A570D145A5F93007DBBDB /* first.png */; };
+		969A5710145A5F93007DBBDB /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 969A570F145A5F93007DBBDB /* first@2x.png */; };
+		969A5713145A5F93007DBBDB /* TaediumSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969A5712145A5F93007DBBDB /* TaediumSecondViewController.m */; };
+		969A5715145A5F93007DBBDB /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 969A5714145A5F93007DBBDB /* second.png */; };
+		969A5717145A5F93007DBBDB /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 969A5716145A5F93007DBBDB /* second@2x.png */; };
+		969A571F145A5F93007DBBDB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969A571E145A5F93007DBBDB /* SenTestingKit.framework */; };
+		969A5720145A5F93007DBBDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969A56F5145A5F93007DBBDB /* UIKit.framework */; };
+		969A5721145A5F93007DBBDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969A56F7145A5F93007DBBDB /* Foundation.framework */; };
+		969A5729145A5F93007DBBDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 969A5727145A5F93007DBBDB /* InfoPlist.strings */; };
+		969A572C145A5F94007DBBDB /* asiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 969A572B145A5F94007DBBDB /* asiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		969A5722145A5F93007DBBDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 969A56E8145A5F93007DBBDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 969A56F0145A5F93007DBBDB;
+			remoteInfo = asi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		969A56F1145A5F93007DBBDB /* asi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		969A56F5145A5F93007DBBDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		969A56F7145A5F93007DBBDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		969A56F9145A5F93007DBBDB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		969A56FD145A5F93007DBBDB /* asi-Info.plist */ = {isa = PBXFileReference; path = "asi-Info.plist"; sourceTree = "<group>"; };
+		969A56FF145A5F93007DBBDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		969A5701145A5F93007DBBDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		969A5703145A5F93007DBBDB /* asi-Prefix.pch */ = {isa = PBXFileReference; path = "asi-Prefix.pch"; sourceTree = "<group>"; };
+		969A5704145A5F93007DBBDB /* TaediumAppDelegate.h */ = {isa = PBXFileReference; path = TaediumAppDelegate.h; sourceTree = "<group>"; };
+		969A5705145A5F93007DBBDB /* TaediumAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaediumAppDelegate.m; sourceTree = "<group>"; };
+		969A5708145A5F93007DBBDB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		969A570A145A5F93007DBBDB /* TaediumFirstViewController.h */ = {isa = PBXFileReference; path = TaediumFirstViewController.h; sourceTree = "<group>"; };
+		969A570B145A5F93007DBBDB /* TaediumFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaediumFirstViewController.m; sourceTree = "<group>"; };
+		969A570D145A5F93007DBBDB /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		969A570F145A5F93007DBBDB /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		969A5711145A5F93007DBBDB /* TaediumSecondViewController.h */ = {isa = PBXFileReference; path = TaediumSecondViewController.h; sourceTree = "<group>"; };
+		969A5712145A5F93007DBBDB /* TaediumSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaediumSecondViewController.m; sourceTree = "<group>"; };
+		969A5714145A5F93007DBBDB /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		969A5716145A5F93007DBBDB /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		969A571D145A5F93007DBBDB /* asiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = asiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		969A571E145A5F93007DBBDB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		969A5726145A5F93007DBBDB /* asiTests-Info.plist */ = {isa = PBXFileReference; path = "asiTests-Info.plist"; sourceTree = "<group>"; };
+		969A5728145A5F93007DBBDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		969A572A145A5F93007DBBDB /* asiTests.h */ = {isa = PBXFileReference; path = asiTests.h; sourceTree = "<group>"; };
+		969A572B145A5F94007DBBDB /* asiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = asiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		969A56EE145A5F93007DBBDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969A56F6145A5F93007DBBDB /* UIKit.framework in Frameworks */,
+				969A56F8145A5F93007DBBDB /* Foundation.framework in Frameworks */,
+				969A56FA145A5F93007DBBDB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		969A5719145A5F93007DBBDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969A571F145A5F93007DBBDB /* SenTestingKit.framework in Frameworks */,
+				969A5720145A5F93007DBBDB /* UIKit.framework in Frameworks */,
+				969A5721145A5F93007DBBDB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		969A56E6145A5F93007DBBDB = {
+			isa = PBXGroup;
+			children = (
+				969A56FB145A5F93007DBBDB /* asi */,
+				969A5724145A5F93007DBBDB /* asiTests */,
+				969A56F4145A5F93007DBBDB /* Frameworks */,
+				969A56F2145A5F93007DBBDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		969A56F2145A5F93007DBBDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				969A56F1145A5F93007DBBDB /* asi.app */,
+				969A571D145A5F93007DBBDB /* asiTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		969A56F4145A5F93007DBBDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				969A56F5145A5F93007DBBDB /* UIKit.framework */,
+				969A56F7145A5F93007DBBDB /* Foundation.framework */,
+				969A56F9145A5F93007DBBDB /* CoreGraphics.framework */,
+				969A571E145A5F93007DBBDB /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		969A56FB145A5F93007DBBDB /* asi */ = {
+			isa = PBXGroup;
+			children = (
+				969A5704145A5F93007DBBDB /* TaediumAppDelegate.h */,
+				969A5705145A5F93007DBBDB /* TaediumAppDelegate.m */,
+				969A5707145A5F93007DBBDB /* MainStoryboard.storyboard */,
+				969A570A145A5F93007DBBDB /* TaediumFirstViewController.h */,
+				969A570B145A5F93007DBBDB /* TaediumFirstViewController.m */,
+				969A570D145A5F93007DBBDB /* first.png */,
+				969A570F145A5F93007DBBDB /* first@2x.png */,
+				969A5711145A5F93007DBBDB /* TaediumSecondViewController.h */,
+				969A5712145A5F93007DBBDB /* TaediumSecondViewController.m */,
+				969A5714145A5F93007DBBDB /* second.png */,
+				969A5716145A5F93007DBBDB /* second@2x.png */,
+				969A56FC145A5F93007DBBDB /* Supporting Files */,
+			);
+			path = asi;
+			sourceTree = "<group>";
+		};
+		969A56FC145A5F93007DBBDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				969A56FD145A5F93007DBBDB /* asi-Info.plist */,
+				969A56FE145A5F93007DBBDB /* InfoPlist.strings */,
+				969A5701145A5F93007DBBDB /* main.m */,
+				969A5703145A5F93007DBBDB /* asi-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		969A5724145A5F93007DBBDB /* asiTests */ = {
+			isa = PBXGroup;
+			children = (
+				969A572A145A5F93007DBBDB /* asiTests.h */,
+				969A572B145A5F94007DBBDB /* asiTests.m */,
+				969A5725145A5F93007DBBDB /* Supporting Files */,
+			);
+			path = asiTests;
+			sourceTree = "<group>";
+		};
+		969A5725145A5F93007DBBDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				969A5726145A5F93007DBBDB /* asiTests-Info.plist */,
+				969A5727145A5F93007DBBDB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		969A56F0145A5F93007DBBDB /* asi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 969A572F145A5F94007DBBDB /* Build configuration list for PBXNativeTarget "asi" */;
+			buildPhases = (
+				969A56ED145A5F93007DBBDB /* Sources */,
+				969A56EE145A5F93007DBBDB /* Frameworks */,
+				969A56EF145A5F93007DBBDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = asi;
+			productName = asi;
+			productReference = 969A56F1145A5F93007DBBDB /* asi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		969A571C145A5F93007DBBDB /* asiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 969A5732145A5F94007DBBDB /* Build configuration list for PBXNativeTarget "asiTests" */;
+			buildPhases = (
+				969A5718145A5F93007DBBDB /* Sources */,
+				969A5719145A5F93007DBBDB /* Frameworks */,
+				969A571A145A5F93007DBBDB /* Resources */,
+				969A571B145A5F93007DBBDB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				969A5723145A5F93007DBBDB /* PBXTargetDependency */,
+			);
+			name = asiTests;
+			productName = asiTests;
+			productReference = 969A571D145A5F93007DBBDB /* asiTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		969A56E8145A5F93007DBBDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Mozilla;
+			};
+			buildConfigurationList = 969A56EB145A5F93007DBBDB /* Build configuration list for PBXProject "asi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 969A56E6145A5F93007DBBDB;
+			productRefGroup = 969A56F2145A5F93007DBBDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				969A56F0145A5F93007DBBDB /* asi */,
+				969A571C145A5F93007DBBDB /* asiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		969A56EF145A5F93007DBBDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969A5700145A5F93007DBBDB /* InfoPlist.strings in Resources */,
+				969A5709145A5F93007DBBDB /* MainStoryboard.storyboard in Resources */,
+				969A570E145A5F93007DBBDB /* first.png in Resources */,
+				969A5710145A5F93007DBBDB /* first@2x.png in Resources */,
+				969A5715145A5F93007DBBDB /* second.png in Resources */,
+				969A5717145A5F93007DBBDB /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		969A571A145A5F93007DBBDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969A5729145A5F93007DBBDB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		969A571B145A5F93007DBBDB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		969A56ED145A5F93007DBBDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969A5702145A5F93007DBBDB /* main.m in Sources */,
+				969A5706145A5F93007DBBDB /* TaediumAppDelegate.m in Sources */,
+				969A570C145A5F93007DBBDB /* TaediumFirstViewController.m in Sources */,
+				969A5713145A5F93007DBBDB /* TaediumSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		969A5718145A5F93007DBBDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969A572C145A5F94007DBBDB /* asiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		969A5723145A5F93007DBBDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 969A56F0145A5F93007DBBDB /* asi */;
+			targetProxy = 969A5722145A5F93007DBBDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		969A56FE145A5F93007DBBDB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				969A56FF145A5F93007DBBDB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		969A5707145A5F93007DBBDB /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				969A5708145A5F93007DBBDB /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		969A5727145A5F93007DBBDB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				969A5728145A5F93007DBBDB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		969A572D145A5F94007DBBDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		969A572E145A5F94007DBBDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		969A5730145A5F94007DBBDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "asi/asi-Prefix.pch";
+				INFOPLIST_FILE = "asi/asi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		969A5731145A5F94007DBBDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "asi/asi-Prefix.pch";
+				INFOPLIST_FILE = "asi/asi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		969A5733145A5F94007DBBDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/asi.app/asi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "asi/asi-Prefix.pch";
+				INFOPLIST_FILE = "asiTests/asiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		969A5734145A5F94007DBBDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/asi.app/asi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "asi/asi-Prefix.pch";
+				INFOPLIST_FILE = "asiTests/asiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		969A56EB145A5F93007DBBDB /* Build configuration list for PBXProject "asi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				969A572D145A5F94007DBBDB /* Debug */,
+				969A572E145A5F94007DBBDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		969A572F145A5F94007DBBDB /* Build configuration list for PBXNativeTarget "asi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				969A5730145A5F94007DBBDB /* Debug */,
+				969A5731145A5F94007DBBDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		969A5732145A5F94007DBBDB /* Build configuration list for PBXNativeTarget "asiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				969A5733145A5F94007DBBDB /* Debug */,
+				969A5734145A5F94007DBBDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 969A56E8145A5F93007DBBDB /* Project object */;
+}
