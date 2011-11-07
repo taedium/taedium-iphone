@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Account.h"
 
-@interface AccountViewController : UIViewController
+@interface AccountViewController : UIViewController {
+    Account *account;
+}
 @property (weak, nonatomic) IBOutlet UITextField *tfUsername;
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btLogin;
+@property (nonatomic, strong) Account *account;
 
 - (IBAction)login:(id)sender;
+- (void) observeValueForKeyPath:(NSString *)keyPath 
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context;
 
 @end

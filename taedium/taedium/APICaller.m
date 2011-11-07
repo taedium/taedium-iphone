@@ -40,7 +40,7 @@
     
     GTMHTTPFetcher* myFetcher = [GTMHTTPFetcher fetcherWithRequest:request];
     [myFetcher beginFetchWithDelegate:self
-                    didFinishSelector:@selector(myFetcher:finishedWithData:error:)];
+                    didFinishSelector:@selector(myFetcher2:finishedWithData:error:)];
     
     return true;
 }
@@ -59,6 +59,24 @@
         NSString* newStr = [[NSString alloc] initWithData:retrievedData
                                                  encoding:NSUTF8StringEncoding];
 
+        
+    }
+}
+
+- (void)myFetcher2:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error {
+    printf("got callback");
+    int status = [error code];
+    if (error != nil) {
+        // failed; either an NSURLConnection error occurred, or the server returned
+        // a status value of at least 300
+        //
+        // the NSError domain string for server status errors is kGTMHTTPFetcherStatusDomain
+        int status = [error code];
+    } else {
+        // fetch succeeded
+        NSString* newStr = [[NSString alloc] initWithData:retrievedData
+                                                 encoding:NSUTF8StringEncoding];
+        
         
     }
 }

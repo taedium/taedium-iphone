@@ -13,13 +13,12 @@
 @synthesize tfUsername;
 @synthesize tfPassword;
 @synthesize btLogin;
+@synthesize account;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+    // TODO add support for a persistent account
     return self;
 }
 
@@ -65,15 +64,23 @@
 }
 
 - (IBAction)login:(id)sender {
-    // TODO assign a member variable (Account), make it persist in the app,
-    // use actual data from the form
+
     NSString *username = [tfUsername text];
     NSString *password = [tfPassword text];
-    Account* account = [[Account alloc] initWithUsername:username password:password email: @"me@you.com"];
-    if ([account loginAccount]) {
-        printf("login succeeded");
-    } else {
-        printf("login failed");
+
+    account = [[Account alloc] initWithUsername:username password:password];
+    [account addObserver:self forKeyPath:@"loginVerified" options:NSKeyValueObservingOptionNew context:NULL];
+    
+    [account loginAccount];
+}
+
+-(void) observeValueForKeyPath:(NSString *)keyPath 
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    
+    if (keyPath == @"loginVerified") {
+        // Show user account info page
     }
 }
 
@@ -90,4 +97,5 @@
     }
     return NO;
 }
+
 @end

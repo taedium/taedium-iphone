@@ -10,8 +10,14 @@
 
 @interface TaediumAppDelegate : UIResponder <UIApplicationDelegate> {
     IBOutlet UITabBarController*  mainTabBarController;
+    
+//    UITabBarController* tabBarController;
+//    UIWindow* window;
 }
 
 @property (strong, nonatomic) UIWindow *window;
+
+//@property (nonatomic, retain) IBOutlet UIWindow * window;
+//@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 
 @end

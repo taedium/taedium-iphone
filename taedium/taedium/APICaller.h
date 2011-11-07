@@ -19,5 +19,6 @@
 - (BOOL) checkLogin:(Account*)account;
 - (BOOL) registerNewUser:(Account*)account;
 - (void) myFetcher:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error;
+- (void) myFetcher2:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error;
 
 @end

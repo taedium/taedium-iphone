@@ -8,26 +8,80 @@
 
 #import "Account.h"
 #import "APICaller.h"
+#import "GTMStringEncoding.h"
+#import "SBJsonParser.h"
 
 @implementation Account
 @synthesize username = _username;
 @synthesize password = _password;
 @synthesize email = _email;
+@synthesize dateJoined = _dateJoined;
+@synthesize dob = _dob;
+@synthesize lastLogin = _lastLogin;
+@synthesize loginVerified = _loginVerified;
 
-// define constructor
+// Constructors
+-(Account*) initWithUsername: (NSString*) u password: (NSString*) p {
+    self = [super init];
+    if(self) {
+        [self setUsername:u];
+        [self setPassword:p];
+    }
+    return self;
+}
+
 -(Account*) initWithUsername: (NSString*) u password: (NSString*) p email:(NSString*) e {
     self = [super init];
     if(self) {
         [self setUsername: u];
         [self setPassword: p];
         [self setEmail: e];
+        [self setLoginVerified: false];
     }
     return self;
 }
+
+// checks to see if login information is valid
+- (void)loginAccount {
+    NSString *address = [NSString stringWithFormat:@"%@/%@", @"http://taedium.me/api/users", _username];
     
--(BOOL)loginAccount {
-    //return [APICaller checkLogin:self];
-    [[APICaller getInstance] checkLogin:self];
+    NSURL *url = [NSURL URLWithString:address];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    NSString *userpass = [NSString stringWithFormat:@"%@:%@", _username, _password];    
+    
+    NSString *encodedUserpass = [[GTMStringEncoding rfc4648Base64WebsafeStringEncoding] encodeString:userpass];
+    
+    NSString *header = [NSString stringWithFormat:@"%@%@", @"Basic ", encodedUserpass];
+    [request setValue:header forHTTPHeaderField:@"authorization"];    
+    
+    GTMHTTPFetcher* loginFetcher = [GTMHTTPFetcher fetcherWithRequest:request];
+    [loginFetcher beginFetchWithDelegate:self
+                       didFinishSelector:@selector(loginCallback:finishedWithData:error:)];
+}
+
+- (void)loginCallback:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error {
+
+    if (error != nil) {
+        // failed; either an NSURLConnection error occurred, or the server returned
+        // TODO handle this
+        int status = [error code];
+    } else {
+        // fetch succeeded
+        NSString* jsonString = [[NSString alloc] initWithData:retrievedData
+                                                 encoding:NSUTF8StringEncoding];
+        
+        // Parse json into usable form
+        SBJsonParser *jsonParser = [SBJsonParser new];        
+        NSDictionary *accountInfo = [jsonParser objectWithString:jsonString error:nil];
+
+        // Set returned info and status
+        [self setEmail: [accountInfo objectForKey:@"email"]];
+        [self setDob: [accountInfo objectForKey:@"date_of_birth"]];
+        [self setDateJoined: [accountInfo objectForKey:@"date_joined"]];
+        [self setLastLogin: [accountInfo objectForKey:@"last_login"]];
+        [self setLoginVerified: YES];       
+    }
 }
 
 -(BOOL)registerAccount {
