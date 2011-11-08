@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960A98E11467AF0D00A530B6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960A98E01467AF0D00A530B6 /* RegisterViewController.m */; };
 		9620EE4814513863006F78B6 /* APICaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 9620EE4714513863006F78B6 /* APICaller.m */; };
 		9620EE4C14513884006F78B6 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 9620EE4B14513884006F78B6 /* Account.m */; };
 		966891D0145FA77900E5638D /* GTMStringEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 966891CF145FA77900E5638D /* GTMStringEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -23,6 +24,8 @@
 		9697E5FF1461E9A4001FA80E /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9697E5F11461E9A4001FA80E /* SBJsonTokeniser.m */; };
 		9697E6001461E9A4001FA80E /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9697E5F31461E9A4001FA80E /* SBJsonUTF8Stream.m */; };
 		9697E6011461E9A4001FA80E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9697E5F51461E9A4001FA80E /* SBJsonWriter.m */; };
+		96B3663B1468FCAE00D35E9B /* AccountInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B366391468FCAE00D35E9B /* AccountInfoViewController.m */; };
+		96B3663C1468FCAE00D35E9B /* AccountInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B3663A1468FCAE00D35E9B /* AccountInfoViewController.xib */; };
 		96E56805144E71B80008C755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56804144E71B80008C755 /* UIKit.framework */; };
 		96E56807144E71B80008C755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56806144E71B80008C755 /* Foundation.framework */; };
 		96E56809144E71B80008C755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56808144E71B80008C755 /* CoreGraphics.framework */; };
@@ -44,8 +47,7 @@
 		96E5684A144E7FC00008C755 /* AddActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E56849144E7FC00008C755 /* AddActivityViewController.m */; };
 		96E5684E144E82860008C755 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5684C144E82860008C755 /* SocialViewController.m */; };
 		96E56852144E84510008C755 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E56851144E84510008C755 /* AccountViewController.m */; };
-		96FF820A146788E600CCA55B /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FF8209146788E600CCA55B /* View2.xib */; };
-		96FF820C14678DC100CCA55B /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FF820B14678DC100CCA55B /* RegisterView.xib */; };
+		96FF820A146788E600CCA55B /* Register.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FF8209146788E600CCA55B /* Register.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		960A98DF1467AF0D00A530B6 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		960A98E01467AF0D00A530B6 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		9620EE4614513863006F78B6 /* APICaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICaller.h; sourceTree = "<group>"; };
 		9620EE4714513863006F78B6 /* APICaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICaller.m; sourceTree = "<group>"; };
 		9620EE4A14513884006F78B6 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
@@ -93,6 +97,9 @@
 		9697E5F31461E9A4001FA80E /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		9697E5F41461E9A4001FA80E /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		9697E5F51461E9A4001FA80E /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		96B366381468FCAE00D35E9B /* AccountInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountInfoViewController.h; path = ../AccountInfoViewController.h; sourceTree = "<group>"; };
+		96B366391468FCAE00D35E9B /* AccountInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountInfoViewController.m; path = ../AccountInfoViewController.m; sourceTree = "<group>"; };
+		96B3663A1468FCAE00D35E9B /* AccountInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccountInfoViewController.xib; path = ../AccountInfoViewController.xib; sourceTree = "<group>"; };
 		96E56800144E71B80008C755 /* taedium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taedium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E56804144E71B80008C755 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96E56806144E71B80008C755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,8 +131,7 @@
 		96E5684C144E82860008C755 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
 		96E56850144E84510008C755 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		96E56851144E84510008C755 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
-		96FF8209146788E600CCA55B /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View2.xib; sourceTree = "<group>"; };
-		96FF820B14678DC100CCA55B /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		96FF8209146788E600CCA55B /* Register.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Register.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +228,6 @@
 		96E567F5144E71B80008C755 = {
 			isa = PBXGroup;
 			children = (
-				96FF820B14678DC100CCA55B /* RegisterView.xib */,
 				96691813145FAED400705241 /* GTMDefines.h */,
 				96E5680A144E71B80008C755 /* taedium */,
 				96E56833144E71B80008C755 /* taediumTests */,
@@ -254,12 +259,15 @@
 		96E5680A144E71B80008C755 /* taedium */ = {
 			isa = PBXGroup;
 			children = (
+				96B366381468FCAE00D35E9B /* AccountInfoViewController.h */,
+				96B366391468FCAE00D35E9B /* AccountInfoViewController.m */,
+				96B3663A1468FCAE00D35E9B /* AccountInfoViewController.xib */,
 				9620EE491451386B006F78B6 /* Models */,
 				9620EE441451345A006F78B6 /* Utilities */,
 				96E56813144E71B80008C755 /* TaediumAppDelegate.h */,
 				96E56814144E71B80008C755 /* TaediumAppDelegate.m */,
 				96E56816144E71B80008C755 /* MainStoryboard.storyboard */,
-				96FF8209146788E600CCA55B /* View2.xib */,
+				96FF8209146788E600CCA55B /* Register.xib */,
 				96E56819144E71B80008C755 /* FilterActivitiesViewController.h */,
 				96E5681A144E71B80008C755 /* FilterActivitiesViewController.m */,
 				96E56820144E71B80008C755 /* ViewRecsViewController.h */,
@@ -271,6 +279,8 @@
 				96E5684C144E82860008C755 /* SocialViewController.m */,
 				96E56850144E84510008C755 /* AccountViewController.h */,
 				96E56851144E84510008C755 /* AccountViewController.m */,
+				960A98DF1467AF0D00A530B6 /* RegisterViewController.h */,
+				960A98E01467AF0D00A530B6 /* RegisterViewController.m */,
 			);
 			path = taedium;
 			sourceTree = "<group>";
@@ -383,8 +393,8 @@
 				96E5681F144E71B80008C755 /* first@2x.png in Resources */,
 				96E56824144E71B80008C755 /* second.png in Resources */,
 				96E56826144E71B80008C755 /* second@2x.png in Resources */,
-				96FF820A146788E600CCA55B /* View2.xib in Resources */,
-				96FF820C14678DC100CCA55B /* RegisterView.xib in Resources */,
+				96FF820A146788E600CCA55B /* Register.xib in Resources */,
+				96B3663C1468FCAE00D35E9B /* AccountInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +452,8 @@
 				9697E5FF1461E9A4001FA80E /* SBJsonTokeniser.m in Sources */,
 				9697E6001461E9A4001FA80E /* SBJsonUTF8Stream.m in Sources */,
 				9697E6011461E9A4001FA80E /* SBJsonWriter.m in Sources */,
+				960A98E11467AF0D00A530B6 /* RegisterViewController.m in Sources */,
+				96B3663B1468FCAE00D35E9B /* AccountInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

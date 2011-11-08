@@ -10,6 +10,7 @@
 
 @interface TaediumAppDelegate : UIResponder <UIApplicationDelegate> {
     IBOutlet UITabBarController*  mainTabBarController;
+//    IBOutlet UINavigationController* accountNavigationController;
     
 //    UITabBarController* tabBarController;
 //    UIWindow* window;

@@ -65,34 +65,28 @@
             </objects>
             <point key="canvasLocation" x="606" y="-395"/>
         </scene>
-        <scene sceneID="RJE-61-4d5">
+        <scene sceneID="MP4-zJ-PC4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbu-5X-M4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="nSM-QY-1br" customClass="AccountViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iD0-8M-PeS" userLabel="vwLogin">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lG4-Pz-gRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="uMa-ws-Iz7" customClass="AccountViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t3i-Wz-GIS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" clearButtonMode="whileEditing" id="tBf-sO-1oz" userLabel="tfUsername">
-                                <rect key="frame" x="20" y="125" width="280" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" clearButtonMode="whileEditing" id="TYj-4d-Jbi" userLabel="tfUsername">
+                                <rect key="frame" x="20" y="87" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
-                                <connections>
-                                    <outlet property="delegate" destination="nSM-QY-1br" id="iQx-5a-lTf"/>
-                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" id="mEo-4E-Z8x" userLabel="tfPassword">
-                                <rect key="frame" x="20" y="164" width="280" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" id="EM2-iV-Tms" userLabel="tfPassword">
+                                <rect key="frame" x="20" y="126" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="nSM-QY-1br" id="F2n-Qh-lx0"/>
-                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cRU-tx-F2l" userLabel="btLogin">
-                                <rect key="frame" x="204" y="203" width="96" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0iZ-Ao-0sI" userLabel="btLogin">
+                                <rect key="frame" x="204" y="165" width="96" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Login">
@@ -103,19 +97,57 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="login:" destination="nSM-QY-1br" eventType="touchUpInside" id="oJX-0A-xDh"/>
+                                    <action selector="login:" destination="uMa-ws-Iz7" eventType="touchUpInside" id="A8E-4f-VrK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dUY-Nr-RhY" userLabel="btRegister">
+                                <rect key="frame" x="74" y="310" width="173" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Create New Account">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="register:" destination="uMa-ws-Iz7" eventType="touchUpInside" id="ZWO-WJ-gfp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Don't have a Taedium account?" lineBreakMode="tailTruncation" minimumFontSize="10" id="MEh-Lk-w6z">
+                                <rect key="frame" x="39" y="281" width="243" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="first" id="i6z-GX-eLK" userLabel="tiAccount"/>
+                    <navigationItem key="navigationItem" title="Login" id="tq2-3R-AVb"/>
                     <connections>
-                        <outlet property="btLogin" destination="cRU-tx-F2l" id="Dus-Dl-xDK"/>
-                        <outlet property="tfPassword" destination="mEo-4E-Z8x" id="qRt-pc-bvU"/>
-                        <outlet property="tfUsername" destination="tBf-sO-1oz" id="oEP-zb-WTD"/>
+                        <outlet property="btLogin" destination="0iZ-Ao-0sI" id="kLC-Tu-xcK"/>
+                        <outlet property="btRegister" destination="dUY-Nr-RhY" id="I14-2a-bQ4"/>
+                        <outlet property="tfPassword" destination="EM2-iV-Tms" id="Mwg-eA-o00"/>
+                        <outlet property="tfUsername" destination="TYj-4d-Jbi" id="pxF-vO-w34"/>
                     </connections>
                 </viewController>
+            </objects>
+            <point key="canvasLocation" x="141" y="1368"/>
+        </scene>
+        <scene sceneID="r9L-bG-MbD">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGe-lt-hwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="cnC-E1-7q9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="first" id="tKy-EI-Oga"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="OZc-SN-OBJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uMa-ws-Iz7" kind="relationship" relationship="rootViewController" id="dd5-lR-jsp"/>
+                    </connections>
+                </navigationController>
             </objects>
             <point key="canvasLocation" x="141" y="771"/>
         </scene>
@@ -162,7 +194,7 @@
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
                         <segue destination="9r2-Lv-bE5" kind="relationship" relationship="viewControllers" id="htQ-bc-8Rg"/>
                         <segue destination="lAI-gN-6ob" kind="relationship" relationship="viewControllers" id="kxW-Ep-eYw"/>
-                        <segue destination="nSM-QY-1br" kind="relationship" relationship="viewControllers" id="clR-A0-8bp"/>
+                        <segue destination="cnC-E1-7q9" kind="relationship" relationship="viewControllers" id="5kD-xb-cX9"/>
                     </connections>
                 </tabBarController>
             </objects>

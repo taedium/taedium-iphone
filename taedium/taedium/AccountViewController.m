@@ -8,12 +8,16 @@
 
 #import "AccountViewController.h"
 #import "Account.h"
+#import "RegisterViewController.h"
 
 @implementation AccountViewController
 @synthesize tfUsername;
 @synthesize tfPassword;
 @synthesize btLogin;
+@synthesize btRegister;
 @synthesize account;
+@synthesize registerViewController;
+@synthesize accountInfoViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,6 +78,17 @@
     [account loginAccount];
 }
 
+- (IBAction)register:(id)sender {
+    
+    if(self.registerViewController == nil) {
+        RegisterViewController *regController = [[RegisterViewController alloc] init];
+        self.registerViewController = regController;
+    }
+    
+    [self.navigationController pushViewController:self.registerViewController animated: YES];
+
+}
+
 -(void) observeValueForKeyPath:(NSString *)keyPath 
                       ofObject:(id)object
                         change:(NSDictionary *)change
@@ -81,7 +96,31 @@
     
     if (keyPath == @"loginVerified") {
         // Show user account info page
+        [self showAccountInfo];
     }
+}
+
+-(void) showAccountInfo 
+{
+    if(self.accountInfoViewController == nil) {
+        AccountInfoViewController *accountInfoController = [[AccountInfoViewController alloc] init];
+        self.accountInfoViewController = accountInfoController;
+    }
+    
+    
+    
+    // Set the back button to be logout
+    // TODO Actually log out the user when this button is pushed
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+
+    // Slide away keyboard and erase text fields for if we logout
+    [tfUsername setText:@""];
+    [tfPassword setText:@""];
+    [tfUsername resignFirstResponder];
+    [tfPassword resignFirstResponder];
+    
+    [self.navigationController pushViewController:self.accountInfoViewController animated: YES];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
