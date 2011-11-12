@@ -9,6 +9,12 @@
 #import "RegisterViewController.h"
 
 @implementation RegisterViewController
+@synthesize tfUsername;
+@synthesize tfPassword;
+@synthesize tfPasswordRetype;
+@synthesize tfEmail;
+@synthesize dpDOB;
+@synthesize btRegister;
 
 - (id)init
 {
@@ -35,16 +41,24 @@
 }*/
 
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIScrollView *tempScrollView=(UIScrollView *)self.view;
+    tempScrollView.contentSize=CGSizeMake(320,500);
 }
-*/
+
 
 - (void)viewDidUnload
 {
+    [self setTfUsername:nil];
+    [self setTfPassword:nil];
+    [self setTfPasswordRetype:nil];
+    [self setTfEmail:nil];
+    [self setDpDOB:nil];
+    [self setBtRegister:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

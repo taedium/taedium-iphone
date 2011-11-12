@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface RegisterViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *tfUsername;
+@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
+@property (weak, nonatomic) IBOutlet UITextField *tfPasswordRetype;
+@property (weak, nonatomic) IBOutlet UITextField *tfEmail;
+@property (weak, nonatomic) IBOutlet UIDatePicker *dpDOB;
+@property (weak, nonatomic) IBOutlet UIButton *btRegister;
+
+// TODO Left off after adding outlets, getting ready to create an account object
+// and setup the register call to the server.
 
 @end

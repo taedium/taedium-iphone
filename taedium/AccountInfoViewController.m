@@ -78,11 +78,9 @@
     }
     
     NSString* key = [displayKeys objectAtIndex:indexPath.row];
+    // TODO lookup string values in some nice internationalized xml file or however iOS does it
     tableCell.textLabel.text = key;
-    Account * a = self.account;
-    NSDictionary *dict = [self.account getDictionary];
-    NSString *value = [dict objectForKey:key];
-    tableCell.detailTextLabel.text = [[account getDictionary] objectForKey:key];
+    tableCell.detailTextLabel.text = [[self.account getDictionary] objectForKey:key];
     
     return tableCell;
 }
