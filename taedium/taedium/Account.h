@@ -27,10 +27,16 @@
 @property (nonatomic, copy) NSNumber *lastLogin;
 @property (nonatomic, assign) BOOL loginVerified;
 
+// TODO can probably declare a static property somehow to return this rather
+// than generating a list and returning it DUMB WAY!
++(NSArray*) getFieldNames;
++(NSArray*) getDisplayableFieldNames;
+
 -(Account*) initWithUsername: (NSString*) u password: (NSString*) p;
 -(Account*) initWithUsername: (NSString*) u password: (NSString*) p email:(NSString*) e;
 -(void) loginAccount;
 -(void) registerAccount;
+-(NSDictionary*) getDictionary;
 
 - (void)loginCallback:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error;
 

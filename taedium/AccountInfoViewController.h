@@ -9,12 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "Account.h"
 
-@interface AccountInfoViewController : UIViewController {
+@interface AccountInfoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     Account *account;
+    NSArray *displayKeys;
 }
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+//@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) Account *account;
+@property (nonatomic, retain) NSArray *displayKeys;
 
 -(id) initWithAccount: (Account*) account;
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

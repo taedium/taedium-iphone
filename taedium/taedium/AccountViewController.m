@@ -120,6 +120,8 @@
     [tfUsername resignFirstResponder];
     [tfPassword resignFirstResponder];
     
+    [self.accountInfoViewController setAccount:self.account];
+    
     [self.navigationController pushViewController:self.accountInfoViewController animated: YES];
 }
 

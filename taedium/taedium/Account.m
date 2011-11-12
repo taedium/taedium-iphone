@@ -87,4 +87,23 @@
 -(BOOL)registerAccount {
     //return [APICaller registerNewUser:self];
 }
+
+//TODO: we can probably just store a dict in here and change stuff as the user changes it, small performance improvement
+-(NSDictionary*) getDictionary {
+    NSArray *keys = [NSArray arrayWithObjects:@"username", @"password", @"email", @"dateJoined", @"dob", @"lastLogin", nil];
+    NSArray *values = [NSArray arrayWithObjects:self.username, self.password, self.email, self.dateJoined, self.dob, self.lastLogin, nil];    
+    NSDictionary *dict = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+    return dict;
+}
+
++(NSArray*) getFieldNames {
+    // TODO figure out static stuff...since we have this same shit being used in the getDictionary method above
+    return [NSArray arrayWithObjects:@"username", @"password", @"email", @"dateJoined", @"dob", @"lastLogin", nil];
+}
+
+// Only returns names of fields that we would want to display
++(NSArray*) getDisplayableFieldNames {
+    // TODO figure out static stuff...since we have this same shit being used in the getDictionary method above
+    return [NSArray arrayWithObjects:@"username", @"email", @"dateJoined", @"dob", @"lastLogin", nil];
+}
 @end

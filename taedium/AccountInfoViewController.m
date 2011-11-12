@@ -10,23 +10,14 @@
 
 @implementation AccountInfoViewController
 
-@synthesize tableView;
+@synthesize displayKeys;
 @synthesize account;
 
 - (id)initWithAccount:(Account *)initAccount
 {
     self = [super initWithNibName:@"AccountInfoViewController" bundle:[NSBundle mainBundle]];
-    self.title = @"Account Information";
     [self setAccount:initAccount];
     return self;
-}
-
-- (void) setAccount:(Account *)newAccount
-{
-    self.account = newAccount;
-    // TODO left off here trying to get table view setup
-    // http://developer.apple.com/library/ios/#documentation/userexperience/conceptual/TableView_iPhone/CreateConfigureTableView/CreateConfigureTableView.html#//apple_ref/doc/uid/TP40007451-CH6-SW10
-    //tableView setDataSource:<#(id<UITableViewDataSource>)#>
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -52,14 +43,54 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self setDisplayKeys:[Account getDisplayableFieldNames]];
+    self.title = @"Account Information";
+
 }
 
 - (void)viewDidUnload
 {
-    [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    // There is only one section.
+    
+    return 1;
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    // Return the number of time zone names.
+    return [displayKeys count];
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *tableCell = [tableView dequeueReusableCellWithIdentifier:@"TableIdentifier"];
+    if (tableCell == nil) {
+        tableCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"TableIdentifier"];
+    }
+    
+    NSString* key = [displayKeys objectAtIndex:indexPath.row];
+    tableCell.textLabel.text = key;
+    Account * a = self.account;
+    NSDictionary *dict = [self.account getDictionary];
+    NSString *value = [dict objectForKey:key];
+    tableCell.detailTextLabel.text = [[account getDictionary] objectForKey:key];
+    
+    return tableCell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *message = [NSString stringWithFormat:@"You selected %@", [displayKeys objectAtIndex:indexPath.row]];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Work bitch!" message:message delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
