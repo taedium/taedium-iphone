@@ -10,15 +10,21 @@
 #import "APICaller.h"
 #import "GTMStringEncoding.h"
 #import "SBJsonParser.h"
+#import "NSObject+SBJson.h"
 
 @implementation Account
-@synthesize username = _username;
-@synthesize password = _password;
-@synthesize email = _email;
-@synthesize dateJoined = _dateJoined;
-@synthesize dob = _dob;
-@synthesize lastLogin = _lastLogin;
-@synthesize loginVerified = _loginVerified;
+
+// TODO either do this underscore thing everywhere or remove it
+// I just find it annoying, and I know I'm accessing a private
+// variable and a lot of code doesn't use this convetion, probably
+// just kill it as it is just causing problems.
+@synthesize username;
+@synthesize password;
+@synthesize email;
+@synthesize dateJoined;
+@synthesize dob;
+@synthesize lastLogin;
+@synthesize loginVerified;
 
 // Constructors
 -(Account*) initWithUsername: (NSString*) u password: (NSString*) p {
@@ -30,12 +36,13 @@
     return self;
 }
 
--(Account*) initWithUsername: (NSString*) u password: (NSString*) p email:(NSString*) e {
+-(Account*) initWithUsername: (NSString*) u password: (NSString*) p email:(NSString*) e dob:(NSString *)d {
     self = [super init];
     if(self) {
         [self setUsername: u];
         [self setPassword: p];
         [self setEmail: e];
+        [self setDob:d];
         [self setLoginVerified: false];
     }
     return self;
@@ -43,12 +50,12 @@
 
 // checks to see if login information is valid
 - (void)loginAccount {
-    NSString *address = [NSString stringWithFormat:@"%@/%@", @"http://taedium.me/api/users", _username];
+    NSString *address = [NSString stringWithFormat:@"%@/%@", @"http://taedium.me/api/users", self.username];
     
     NSURL *url = [NSURL URLWithString:address];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    NSString *userpass = [NSString stringWithFormat:@"%@:%@", _username, _password];    
+    NSString *userpass = [NSString stringWithFormat:@"%@:%@", self.username, self.password];    
     
     NSString *encodedUserpass = [[GTMStringEncoding rfc4648Base64WebsafeStringEncoding] encodeString:userpass];
     
@@ -84,15 +91,96 @@
     }
 }
 
--(BOOL)registerAccount {
-    //return [APICaller registerNewUser:self];
+-(void)registerAccount {
+    NSString *address = @"http://taedium.me/api/users";
+    
+    NSURL *url = [NSURL URLWithString:address];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"]; 
+    
+    NSMutableDictionary *jsonDict = [self getDictionary];
+    
+    // remove last login and date joined fields
+    [jsonDict removeObjectForKey:@"dateJoined"];
+    [jsonDict removeObjectForKey:@"lastLogin"];
+    
+    // remove dob and add date_of_birth as required by api
+    NSString *dob = [jsonDict objectForKey:@"dob"];
+    [jsonDict removeObjectForKey:@"dob"];
+    [jsonDict setObject:dob forKey:@"date_of_birth"];
+    
+    // TODO LEFT OFF HERE
+    // crashing for some stupid reason, removing objects from the
+    // dictionary isn't updating the count of the # of objects in the dictionary??
+    // I donno #fuckedUp !!!!
+    
+    NSString *jsonString = [jsonDict JSONRepresentation];
+    
+    printf("%s", [jsonString cStringUsingEncoding:NSUTF8StringEncoding]);
+
+    
+    NSData *httpDataBody = [jsonString dataUsingEncoding:NSASCIIStringEncoding];
+
+
+    
+    //[request setHTTPBody:httpDataBody];
+    
+    
+    
+    GTMHTTPFetcher* registerFetcher = [GTMHTTPFetcher fetcherWithRequest:request];
+    [request setHTTPMethod:@"POST"];
+    [registerFetcher setPostData:httpDataBody];
+
+    
+    [registerFetcher beginFetchWithDelegate:self
+                       didFinishSelector:@selector(registerCallback:finishedWithData:error:)];
+}
+
+- (void)registerCallback:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error {
+    
+    if (error != nil) {
+        // failed; either an NSURLConnection error occurred, or the server returned
+        // TODO handle this
+        int status = [error code];
+    } else {
+        // register succeeded
+        
+        // Set current date/time
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"dd-MM-yyyy HH:mm"];
+        NSString *dateString = [formatter stringFromDate:[NSDate date]];
+
+        // Set returned info and status
+        [self setLastLogin: dateString];
+        [self setDateJoined:dateString];
+        [self setLoginVerified: YES];
+    }
 }
 
 //TODO: we can probably just store a dict in here and change stuff as the user changes it, small performance improvement
--(NSDictionary*) getDictionary {
+-(NSMutableDictionary*) getDictionary {
     NSArray *keys = [NSArray arrayWithObjects:@"username", @"password", @"email", @"dateJoined", @"dob", @"lastLogin", nil];
+    if (self.username == nil) {
+        self.username = @"";
+    }
+    if (self.password == nil) {
+        self.password = @"";   
+    }
+    if (self.email == nil) {
+        self.email = @"";
+    }
+    if (self.dateJoined == nil) {
+        self.dateJoined = @"";
+    }
+    if (self.dob == nil) {
+        self.dob = @"";
+    }
+    if (self.lastLogin == nil) {
+        self.lastLogin = @"";
+    }    
     NSArray *values = [NSArray arrayWithObjects:self.username, self.password, self.email, self.dateJoined, self.dob, self.lastLogin, nil];    
-    NSDictionary *dict = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjects:values forKeys:keys];
     return dict;
 }
 

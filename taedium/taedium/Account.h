@@ -13,18 +13,18 @@
     NSString *username;
     NSString *password;
     NSString *email;
-    NSNumber *dateJoined;
+    NSString *dateJoined;
     NSString *dob;
-    NSNumber *lastLogin;
+    NSString *lastLogin;
     BOOL loginVerified;
 }
 
 @property (nonatomic, copy) NSString *username;
 @property (nonatomic, copy) NSString *password;
 @property (nonatomic, copy) NSString *email;
-@property (nonatomic, copy) NSNumber *dateJoined;
+@property (nonatomic, copy) NSString *dateJoined;
 @property (nonatomic, copy) NSString *dob;
-@property (nonatomic, copy) NSNumber *lastLogin;
+@property (nonatomic, copy) NSString *lastLogin;
 @property (nonatomic, assign) BOOL loginVerified;
 
 // TODO can probably declare a static property somehow to return this rather
@@ -33,11 +33,12 @@
 +(NSArray*) getDisplayableFieldNames;
 
 -(Account*) initWithUsername: (NSString*) u password: (NSString*) p;
--(Account*) initWithUsername: (NSString*) u password: (NSString*) p email:(NSString*) e;
+-(Account*) initWithUsername: (NSString*) u password: (NSString*) p email:(NSString*) e dob:(NSString*) d;
 -(void) loginAccount;
 -(void) registerAccount;
--(NSDictionary*) getDictionary;
+-(NSMutableDictionary*) getDictionary;
 
 - (void)loginCallback:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error;
+- (void)registerCallback:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error;
 
 @end

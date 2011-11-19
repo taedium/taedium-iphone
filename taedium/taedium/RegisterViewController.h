@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Account.h"
+#import "AccountInfoViewController.h"
 
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController : UIViewController {
+    Account *account;
+    AccountInfoViewController *acccountInfoViewController;
+}
+
+@property (strong, nonatomic) Account *account;
+@property (strong, nonatomic) AccountInfoViewController *accountInfoViewController;
 @property (weak, nonatomic) IBOutlet UITextField *tfUsername;
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
 @property (weak, nonatomic) IBOutlet UITextField *tfPasswordRetype;
@@ -16,7 +24,13 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *dpDOB;
 @property (weak, nonatomic) IBOutlet UIButton *btRegister;
 
-// TODO Left off after adding outlets, getting ready to create an account object
-// and setup the register call to the server.
+
+- (IBAction)register:(id)sender;
+- (void) observeValueForKeyPath:(NSString *)keyPath 
+                       ofObject:(id)object
+                         change:(NSDictionary *)change
+                        context:(void *)context;
+
+- (void) showAccountInfo;
 
 @end

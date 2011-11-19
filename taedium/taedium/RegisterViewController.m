@@ -15,6 +15,8 @@
 @synthesize tfEmail;
 @synthesize dpDOB;
 @synthesize btRegister;
+@synthesize account;
+@synthesize accountInfoViewController;
 
 - (id)init
 {
@@ -69,5 +71,85 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (IBAction)register:(id)sender {
+    NSDate * date = dpDOB.date;
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/YYYY"];
+    NSString *formattedDate = [dateFormat stringFromDate:date];
+
+    [self setAccount:[[Account alloc] initWithUsername:tfUsername.text 
+                      password:tfPassword.text email:tfEmail.text dob:formattedDate]];
+
+
+    // add observer for loginVerified property
+    [account addObserver:self forKeyPath:@"loginVerified" options:NSKeyValueObservingOptionNew context:NULL];
+    
+    // call register API
+    [account registerAccount];
+    
+
+}
+
+-(void) observeValueForKeyPath:(NSString *)keyPath 
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    // Registration succeeded
+    if (keyPath == @"loginVerified") {
+        
+        // Needed so that account display is happy
+        //[account setDateJoined:[NSNumber numberWithDouble:[[NSDate date]timeIntervalSince1970]]];
+        
+        // Show user account info page
+        [self showAccountInfo];
+    }
+    // TODO error handling if registration failed
+}
+
+-(void) showAccountInfo {
+    
+    if(self.accountInfoViewController == nil) {
+        AccountInfoViewController *accountInfoController = [[AccountInfoViewController alloc] init];
+        self.accountInfoViewController = accountInfoController;
+    }
+    
+    
+    
+    // Set the back button to be logout
+    // TODO Actually log out the user when this button is pushed
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+    
+    // Slide away keyboard and erase text fields for if we logout
+    [tfUsername setText:@""];
+    [tfPassword setText:@""];
+    [tfUsername resignFirstResponder];
+    [tfPassword resignFirstResponder];
+    
+    [self.accountInfoViewController setAccount:self.account];
+    
+    [self.navigationController pushViewController:self.accountInfoViewController animated: YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.tfUsername) {
+        [self.tfPassword becomeFirstResponder];
+    }
+    else if (textField == self.tfPassword) {
+        [self.tfPasswordRetype becomeFirstResponder];
+    }
+    else if (textField == self.tfPasswordRetype) {
+        [self.tfEmail becomeFirstResponder];
+    }
+    else if (textField == self.tfEmail) {
+        [textField resignFirstResponder];
+    }
+    else {
+        [textField resignFirstResponder];
+    }
+    return NO;
+}
+
 
 @end

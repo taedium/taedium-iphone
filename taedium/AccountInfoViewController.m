@@ -78,9 +78,25 @@
     }
     
     NSString* key = [displayKeys objectAtIndex:indexPath.row];
+    //NSDictionary* dict = [self.account getDictionary];
+    // TODO left off here...for some reason when we call login dateJoined comes back as a string,
+    // but when we call register, we try to use a number and this screws things up due to my
+    // lack of knowledge of objective-c casting.
+    // Figure out what we should be getting back for login and if we are getting that.
     // TODO lookup string values in some nice internationalized xml file or however iOS does it
     tableCell.textLabel.text = key;
     tableCell.detailTextLabel.text = [[self.account getDictionary] objectForKey:key];
+    //id value = [[self.account getDictionary] objectForKey:key];
+    /*if (value == nil) {
+        tableCell.detailTextLabel.text = @"";
+    } else if ([value class] == [NSNumber class]) {
+        tableCell.detailTextLabel.text = [value stringValue];
+    } else {
+        tableCell.detailTextLabel.text = value;
+    }*/
+    
+    //tableCell.detailTextLabel.text = stringVal;
+     
     
     return tableCell;
 }

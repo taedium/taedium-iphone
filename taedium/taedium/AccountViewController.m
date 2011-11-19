@@ -130,8 +130,8 @@
         [self.tfPassword becomeFirstResponder];
     }
     else if (textField == self.tfPassword) {
-        [textField resignFirstResponder];
-        [self login:(self)];
+        [textField resignFirstResponder];        
+        [btLogin sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
     else {
         [textField resignFirstResponder];
