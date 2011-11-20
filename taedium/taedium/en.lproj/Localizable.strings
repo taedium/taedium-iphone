@@ -1,0 +1,9 @@
+/* Localized versions of Info.plist keys */
+"username" = "Username";
+"password" = "Password";
+"email" = "E-mail";
+"dateJoined" = "Member since";
+"dob" = "Birthday";
+"lastLogin" = "Last login";
+
+

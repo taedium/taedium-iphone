@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		960A98E11467AF0D00A530B6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960A98E01467AF0D00A530B6 /* RegisterViewController.m */; };
-		9620EE4814513863006F78B6 /* APICaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 9620EE4714513863006F78B6 /* APICaller.m */; };
 		9620EE4C14513884006F78B6 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 9620EE4B14513884006F78B6 /* Account.m */; };
 		966891D0145FA77900E5638D /* GTMStringEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 966891CF145FA77900E5638D /* GTMStringEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		96880387145F9EAD004C3871 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 96880386145F9EAD004C3871 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -30,7 +29,7 @@
 		96E56805144E71B80008C755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56804144E71B80008C755 /* UIKit.framework */; };
 		96E56807144E71B80008C755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56806144E71B80008C755 /* Foundation.framework */; };
 		96E56809144E71B80008C755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56808144E71B80008C755 /* CoreGraphics.framework */; };
-		96E5680F144E71B80008C755 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E5680D144E71B80008C755 /* InfoPlist.strings */; };
+		96E5680F144E71B80008C755 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E5680D144E71B80008C755 /* Localizable.strings */; };
 		96E56811144E71B80008C755 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E56810144E71B80008C755 /* main.m */; };
 		96E56815144E71B80008C755 /* TaediumAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E56814144E71B80008C755 /* TaediumAppDelegate.m */; };
 		96E56818144E71B80008C755 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E56816144E71B80008C755 /* MainStoryboard.storyboard */; };
@@ -64,13 +63,11 @@
 /* Begin PBXFileReference section */
 		960A98DF1467AF0D00A530B6 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		960A98E01467AF0D00A530B6 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		9620EE4614513863006F78B6 /* APICaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICaller.h; sourceTree = "<group>"; };
-		9620EE4714513863006F78B6 /* APICaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICaller.m; sourceTree = "<group>"; };
 		9620EE4A14513884006F78B6 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		9620EE4B14513884006F78B6 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		966891CE145FA77900E5638D /* GTMStringEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMStringEncoding.h; sourceTree = "<group>"; };
 		966891CF145FA77900E5638D /* GTMStringEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMStringEncoding.m; sourceTree = "<group>"; };
-		96691813145FAED400705241 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = taedium/GTMDefines.h; sourceTree = "<group>"; };
+		96691813145FAED400705241 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		96880385145F9EAD004C3871 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
 		96880386145F9EAD004C3871 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
 		9697E5DD1461E9A4001FA80E /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -108,7 +105,7 @@
 		96E56806144E71B80008C755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96E56808144E71B80008C755 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		96E5680C144E71B80008C755 /* taedium-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "taedium-Info.plist"; sourceTree = "<group>"; };
-		96E5680E144E71B80008C755 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96E5680E144E71B80008C755 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		96E56810144E71B80008C755 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96E56812144E71B80008C755 /* taedium-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "taedium-Prefix.pch"; sourceTree = "<group>"; };
 		96E56813144E71B80008C755 /* TaediumAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaediumAppDelegate.h; sourceTree = "<group>"; };
@@ -166,11 +163,10 @@
 			children = (
 				9697E5DC1461E9A4001FA80E /* JSON */,
 				966891CF145FA77900E5638D /* GTMStringEncoding.m */,
+				96691813145FAED400705241 /* GTMDefines.h */,
 				966891CE145FA77900E5638D /* GTMStringEncoding.h */,
 				96880386145F9EAD004C3871 /* GTMHTTPFetcher.m */,
 				96880385145F9EAD004C3871 /* GTMHTTPFetcher.h */,
-				9620EE4614513863006F78B6 /* APICaller.h */,
-				9620EE4714513863006F78B6 /* APICaller.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -231,7 +227,6 @@
 		96E567F5144E71B80008C755 = {
 			isa = PBXGroup;
 			children = (
-				96691813145FAED400705241 /* GTMDefines.h */,
 				96E5680A144E71B80008C755 /* taedium */,
 				96E56833144E71B80008C755 /* taediumTests */,
 				96E56803144E71B80008C755 /* Frameworks */,
@@ -295,7 +290,7 @@
 			children = (
 				9620EE451451347D006F78B6 /* icons */,
 				96E5680C144E71B80008C755 /* taedium-Info.plist */,
-				96E5680D144E71B80008C755 /* InfoPlist.strings */,
+				96E5680D144E71B80008C755 /* Localizable.strings */,
 				96E56810144E71B80008C755 /* main.m */,
 				96E56812144E71B80008C755 /* taedium-Prefix.pch */,
 			);
@@ -375,6 +370,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
 			);
 			mainGroup = 96E567F5144E71B80008C755;
 			productRefGroup = 96E56801144E71B80008C755 /* Products */;
@@ -392,7 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E5680F144E71B80008C755 /* InfoPlist.strings in Resources */,
+				96E5680F144E71B80008C755 /* Localizable.strings in Resources */,
 				96E56818144E71B80008C755 /* MainStoryboard.storyboard in Resources */,
 				96E5681D144E71B80008C755 /* first.png in Resources */,
 				96E5681F144E71B80008C755 /* first@2x.png in Resources */,
@@ -441,7 +437,6 @@
 				96E5684A144E7FC00008C755 /* AddActivityViewController.m in Sources */,
 				96E5684E144E82860008C755 /* SocialViewController.m in Sources */,
 				96E56852144E84510008C755 /* AccountViewController.m in Sources */,
-				9620EE4814513863006F78B6 /* APICaller.m in Sources */,
 				9620EE4C14513884006F78B6 /* Account.m in Sources */,
 				96880387145F9EAD004C3871 /* GTMHTTPFetcher.m in Sources */,
 				966891D0145FA77900E5638D /* GTMStringEncoding.m in Sources */,
@@ -482,12 +477,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		96E5680D144E71B80008C755 /* InfoPlist.strings */ = {
+		96E5680D144E71B80008C755 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				96E5680E144E71B80008C755 /* en */,
 			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		96E56816144E71B80008C755 /* MainStoryboard.storyboard */ = {

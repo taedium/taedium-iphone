@@ -79,7 +79,9 @@
     NSString* key = [displayKeys objectAtIndex:indexPath.row];
 
     // TODO lookup string values in some nice internationalized xml file or however iOS does it
-    tableCell.textLabel.text = key;
+    //NSString* text = NSLocalizedDescriptionKey(key);
+    NSString* test2 = NSLocalizedString(key, nil);
+    tableCell.textLabel.text = test2;
     tableCell.detailTextLabel.text = [self.accountDict objectForKey:key];
     
     return tableCell;

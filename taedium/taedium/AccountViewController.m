@@ -82,11 +82,8 @@
 
 - (IBAction)register:(id)sender {
     
-    if(self.registerViewController == nil) {
-        RegisterViewController *regController = [[RegisterViewController alloc] init];
-        self.registerViewController = regController;
-    }
-    
+    RegisterViewController *regController = [[RegisterViewController alloc] init];
+    self.registerViewController = regController;    
     [self.navigationController pushViewController:self.registerViewController animated: YES];
 
 }
@@ -97,7 +94,6 @@
                        context:(void *)context {
     
     if (keyPath == @"loggedIn") {
-        // Show user account info page
         [self showAccountInfo];
     }
 }
