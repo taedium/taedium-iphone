@@ -12,7 +12,6 @@
 #import "AccountInfoViewController.h"
 
 @interface AccountViewController : UIViewController {
-    Account *account;
     IBOutlet UINavigationController* accountNavigationController;
     //__weak IBOutlet UINavigationItem *accountNavController;
     RegisterViewController *registerViewController;
@@ -22,8 +21,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btLogin;
 @property (weak, nonatomic) IBOutlet UIButton *btRegister;
-
-@property (nonatomic, strong) Account *account;
 
 @property (nonatomic, retain) RegisterViewController *registerViewController;
 @property (nonatomic, retain) AccountInfoViewController *accountInfoViewController;

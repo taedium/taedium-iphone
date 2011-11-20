@@ -7,18 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Account.h"
 
 @interface AccountInfoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
-    Account *account;
-    NSArray *displayKeys;
+    NSArray* displayKeys;
+    NSMutableDictionary* accountDict;
 }
 
-//@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) Account *account;
-@property (nonatomic, retain) NSArray *displayKeys;
-
--(id) initWithAccount: (Account*) account;
+@property (nonatomic, copy) NSArray* displayKeys;
+@property (nonatomic, copy) NSMutableDictionary* accountDict;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;

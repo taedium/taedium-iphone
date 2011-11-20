@@ -26,6 +26,7 @@
 		9697E6011461E9A4001FA80E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9697E5F51461E9A4001FA80E /* SBJsonWriter.m */; };
 		96B3663B1468FCAE00D35E9B /* AccountInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B366391468FCAE00D35E9B /* AccountInfoViewController.m */; };
 		96B3663C1468FCAE00D35E9B /* AccountInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B3663A1468FCAE00D35E9B /* AccountInfoViewController.xib */; };
+		96B756AB1478692F00BEB681 /* GlobalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B756AA1478692F00BEB681 /* GlobalStore.m */; };
 		96E56805144E71B80008C755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56804144E71B80008C755 /* UIKit.framework */; };
 		96E56807144E71B80008C755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56806144E71B80008C755 /* Foundation.framework */; };
 		96E56809144E71B80008C755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E56808144E71B80008C755 /* CoreGraphics.framework */; };
@@ -100,6 +101,8 @@
 		96B366381468FCAE00D35E9B /* AccountInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountInfoViewController.h; path = ../AccountInfoViewController.h; sourceTree = "<group>"; };
 		96B366391468FCAE00D35E9B /* AccountInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountInfoViewController.m; path = ../AccountInfoViewController.m; sourceTree = "<group>"; };
 		96B3663A1468FCAE00D35E9B /* AccountInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccountInfoViewController.xib; path = ../AccountInfoViewController.xib; sourceTree = "<group>"; };
+		96B756A91478692F00BEB681 /* GlobalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalStore.h; sourceTree = "<group>"; };
+		96B756AA1478692F00BEB681 /* GlobalStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalStore.m; sourceTree = "<group>"; };
 		96E56800144E71B80008C755 /* taedium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taedium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E56804144E71B80008C755 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96E56806144E71B80008C755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -281,6 +284,8 @@
 				96E56851144E84510008C755 /* AccountViewController.m */,
 				960A98DF1467AF0D00A530B6 /* RegisterViewController.h */,
 				960A98E01467AF0D00A530B6 /* RegisterViewController.m */,
+				96B756A91478692F00BEB681 /* GlobalStore.h */,
+				96B756AA1478692F00BEB681 /* GlobalStore.m */,
 			);
 			path = taedium;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				9697E6011461E9A4001FA80E /* SBJsonWriter.m in Sources */,
 				960A98E11467AF0D00A530B6 /* RegisterViewController.m in Sources */,
 				96B3663B1468FCAE00D35E9B /* AccountInfoViewController.m in Sources */,
+				96B756AB1478692F00BEB681 /* GlobalStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,16 +7,16 @@
 //
 
 #import "AccountInfoViewController.h"
+#import "GlobalStore.h"
 
 @implementation AccountInfoViewController
 
 @synthesize displayKeys;
-@synthesize account;
+@synthesize accountDict;
 
-- (id)initWithAccount:(Account *)initAccount
+- (id)init
 {
     self = [super initWithNibName:@"AccountInfoViewController" bundle:[NSBundle mainBundle]];
-    [self setAccount:initAccount];
     return self;
 }
 
@@ -24,7 +24,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -43,7 +42,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setDisplayKeys:[Account getDisplayableFieldNames]];
+    [self setDisplayKeys: [Account getFieldNames]];
+    [self setAccountDict: [[[GlobalStore getInstance] account] getDictionary]];
     self.title = @"Account Information";
 
 }
@@ -57,15 +57,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    // There is only one section.
-    
+    // There is only one section.    
     return 1;
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    // Return the number of time zone names.
+    // Return the number of rows our table needs
     return [displayKeys count];
     
 }
@@ -78,25 +77,10 @@
     }
     
     NSString* key = [displayKeys objectAtIndex:indexPath.row];
-    //NSDictionary* dict = [self.account getDictionary];
-    // TODO left off here...for some reason when we call login dateJoined comes back as a string,
-    // but when we call register, we try to use a number and this screws things up due to my
-    // lack of knowledge of objective-c casting.
-    // Figure out what we should be getting back for login and if we are getting that.
+
     // TODO lookup string values in some nice internationalized xml file or however iOS does it
     tableCell.textLabel.text = key;
-    tableCell.detailTextLabel.text = [[self.account getDictionary] objectForKey:key];
-    //id value = [[self.account getDictionary] objectForKey:key];
-    /*if (value == nil) {
-        tableCell.detailTextLabel.text = @"";
-    } else if ([value class] == [NSNumber class]) {
-        tableCell.detailTextLabel.text = [value stringValue];
-    } else {
-        tableCell.detailTextLabel.text = value;
-    }*/
-    
-    //tableCell.detailTextLabel.text = stringVal;
-     
+    tableCell.detailTextLabel.text = [self.accountDict objectForKey:key];
     
     return tableCell;
 }

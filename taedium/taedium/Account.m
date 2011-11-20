@@ -8,25 +8,26 @@
 
 #import "Account.h"
 #import "APICaller.h"
+#import "GlobalStore.h"
 #import "GTMStringEncoding.h"
 #import "SBJsonParser.h"
 #import "NSObject+SBJson.h"
 
 @implementation Account
 
-// TODO either do this underscore thing everywhere or remove it
-// I just find it annoying, and I know I'm accessing a private
-// variable and a lot of code doesn't use this convetion, probably
-// just kill it as it is just causing problems.
 @synthesize username;
 @synthesize password;
 @synthesize email;
 @synthesize dateJoined;
 @synthesize dob;
 @synthesize lastLogin;
-@synthesize loginVerified;
 
 // Constructors
+-(Account*) init {
+    self = [super init];
+    return self;
+}
+
 -(Account*) initWithUsername: (NSString*) u password: (NSString*) p {
     self = [super init];
     if(self) {
@@ -43,8 +44,11 @@
         [self setPassword: p];
         [self setEmail: e];
         [self setDob:d];
-        [self setLoginVerified: false];
     }
+    return self;
+}
+
+-(Account* )copyWithZone:(NSZone *)zone {
     return self;
 }
 
@@ -87,18 +91,14 @@
         [self setDob: [accountInfo objectForKey:@"date_of_birth"]];
         [self setDateJoined: [accountInfo objectForKey:@"date_joined"]];
         [self setLastLogin: [accountInfo objectForKey:@"last_login"]];
-        [self setLoginVerified: YES];       
+        [[GlobalStore getInstance] setLoggedIn:YES];
     }
 }
 
 -(void)registerAccount {
     NSString *address = @"http://taedium.me/api/users";
-    
     NSURL *url = [NSURL URLWithString:address];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"]; 
-    
+
     NSMutableDictionary *jsonDict = [self getDictionary];
     
     // remove last login and date joined fields
@@ -109,30 +109,16 @@
     NSString *dob = [jsonDict objectForKey:@"dob"];
     [jsonDict removeObjectForKey:@"dob"];
     [jsonDict setObject:dob forKey:@"date_of_birth"];
-    
-    // TODO LEFT OFF HERE
-    // crashing for some stupid reason, removing objects from the
-    // dictionary isn't updating the count of the # of objects in the dictionary??
-    // I donno #fuckedUp !!!!
-    
-    NSString *jsonString = [jsonDict JSONRepresentation];
-    
-    printf("%s", [jsonString cStringUsingEncoding:NSUTF8StringEncoding]);
 
-    
-    NSData *httpDataBody = [jsonString dataUsingEncoding:NSASCIIStringEncoding];
-
-
-    
-    //[request setHTTPBody:httpDataBody];
-    
-    
-    
+    // Prepare request
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"]; 
+    NSData *httpDataBody = [[jsonDict JSONRepresentation] dataUsingEncoding:NSASCIIStringEncoding];
     GTMHTTPFetcher* registerFetcher = [GTMHTTPFetcher fetcherWithRequest:request];
     [request setHTTPMethod:@"POST"];
     [registerFetcher setPostData:httpDataBody];
-
     
+    // Send request
     [registerFetcher beginFetchWithDelegate:self
                        didFinishSelector:@selector(registerCallback:finishedWithData:error:)];
 }
@@ -154,7 +140,7 @@
         // Set returned info and status
         [self setLastLogin: dateString];
         [self setDateJoined:dateString];
-        [self setLoginVerified: YES];
+        [[GlobalStore getInstance] setLoggedIn:YES];
     }
 }
 
@@ -185,13 +171,7 @@
 }
 
 +(NSArray*) getFieldNames {
-    // TODO figure out static stuff...since we have this same shit being used in the getDictionary method above
     return [NSArray arrayWithObjects:@"username", @"password", @"email", @"dateJoined", @"dob", @"lastLogin", nil];
 }
 
-// Only returns names of fields that we would want to display
-+(NSArray*) getDisplayableFieldNames {
-    // TODO figure out static stuff...since we have this same shit being used in the getDictionary method above
-    return [NSArray arrayWithObjects:@"username", @"email", @"dateJoined", @"dob", @"lastLogin", nil];
-}
 @end

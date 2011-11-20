@@ -7,6 +7,7 @@
 //
 
 #import "AccountViewController.h"
+#import "GlobalStore.h"
 #import "Account.h"
 #import "RegisterViewController.h"
 
@@ -15,14 +16,12 @@
 @synthesize tfPassword;
 @synthesize btLogin;
 @synthesize btRegister;
-@synthesize account;
 @synthesize registerViewController;
 @synthesize accountInfoViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    // TODO add support for a persistent account
     return self;
 }
 
@@ -43,13 +42,17 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // TODO add support for a persistent account
+    
+    // add this as an observer for when loggedIn state has changed
+    [[GlobalStore getInstance] addObserver:self forKeyPath:@"loggedIn" options:NSKeyValueObservingOptionNew context:NULL];
 }
-*/
+
 
 - (void)viewDidUnload
 {
@@ -72,10 +75,9 @@
     NSString *username = [tfUsername text];
     NSString *password = [tfPassword text];
 
-    account = [[Account alloc] initWithUsername:username password:password];
-    [account addObserver:self forKeyPath:@"loginVerified" options:NSKeyValueObservingOptionNew context:NULL];
-    
-    [account loginAccount];
+    Account* account = [[Account alloc] initWithUsername:username password:password];
+    [[GlobalStore getInstance] setAccount: account];
+    [[[GlobalStore getInstance] account] loginAccount];
 }
 
 - (IBAction)register:(id)sender {
@@ -94,7 +96,7 @@
                         change:(NSDictionary *)change
                        context:(void *)context {
     
-    if (keyPath == @"loginVerified") {
+    if (keyPath == @"loggedIn") {
         // Show user account info page
         [self showAccountInfo];
     }
@@ -102,12 +104,8 @@
 
 -(void) showAccountInfo 
 {
-    if(self.accountInfoViewController == nil) {
-        AccountInfoViewController *accountInfoController = [[AccountInfoViewController alloc] init];
-        self.accountInfoViewController = accountInfoController;
-    }
-    
-    
+    AccountInfoViewController *accountInfoController = [[AccountInfoViewController alloc] init];
+    self.accountInfoViewController = accountInfoController;
     
     // Set the back button to be logout
     // TODO Actually log out the user when this button is pushed
@@ -120,8 +118,7 @@
     [tfUsername resignFirstResponder];
     [tfPassword resignFirstResponder];
     
-    [self.accountInfoViewController setAccount:self.account];
-    
+    [self.navigationController popToRootViewControllerAnimated: NO];
     [self.navigationController pushViewController:self.accountInfoViewController animated: YES];
 }
 
