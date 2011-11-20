@@ -93,7 +93,9 @@
                         change:(NSDictionary *)change
                        context:(void *)context {
     
-    if (keyPath == @"loggedIn") {
+    BOOL loggedIn = [[GlobalStore getInstance] loggedIn];
+    
+    if (keyPath == @"loggedIn" && loggedIn) {
         [self showAccountInfo];
     }
 }

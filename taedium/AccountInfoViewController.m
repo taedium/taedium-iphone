@@ -69,6 +69,16 @@
     
 }
 
+// Logs user out when back button ("Logout") is clicked in nav controller
+-(void) viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // Set a blank account and log out
+        [[GlobalStore getInstance] setAccount:[[Account alloc] init]];
+        [[GlobalStore getInstance] setLoggedIn:NO];
+    }
+    [super viewWillDisappear:animated];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *tableCell = [tableView dequeueReusableCellWithIdentifier:@"TableIdentifier"];
