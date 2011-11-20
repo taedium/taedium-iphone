@@ -161,12 +161,8 @@
 		9620EE441451345A006F78B6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				96B756AE14789B2E00BEB681 /* GTM */,
 				9697E5DC1461E9A4001FA80E /* JSON */,
-				966891CF145FA77900E5638D /* GTMStringEncoding.m */,
-				96691813145FAED400705241 /* GTMDefines.h */,
-				966891CE145FA77900E5638D /* GTMStringEncoding.h */,
-				96880386145F9EAD004C3871 /* GTMHTTPFetcher.m */,
-				96880385145F9EAD004C3871 /* GTMHTTPFetcher.h */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -224,6 +220,49 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		96B756AE14789B2E00BEB681 /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				966891CF145FA77900E5638D /* GTMStringEncoding.m */,
+				96691813145FAED400705241 /* GTMDefines.h */,
+				966891CE145FA77900E5638D /* GTMStringEncoding.h */,
+				96880386145F9EAD004C3871 /* GTMHTTPFetcher.m */,
+				96880385145F9EAD004C3871 /* GTMHTTPFetcher.h */,
+			);
+			name = GTM;
+			sourceTree = "<group>";
+		};
+		96B756AF14789B6100BEB681 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96B3663A1468FCAE00D35E9B /* AccountInfoViewController.xib */,
+				96E56816144E71B80008C755 /* MainStoryboard.storyboard */,
+				96FF8209146788E600CCA55B /* Register.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		96B756B014789BB800BEB681 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96B366381468FCAE00D35E9B /* AccountInfoViewController.h */,
+				96B366391468FCAE00D35E9B /* AccountInfoViewController.m */,
+				96E56848144E7FBF0008C755 /* AddActivityViewController.h */,
+				96E56849144E7FC00008C755 /* AddActivityViewController.m */,
+				96E5684B144E82860008C755 /* SocialViewController.h */,
+				96E5684C144E82860008C755 /* SocialViewController.m */,
+				96E56850144E84510008C755 /* AccountViewController.h */,
+				96E56851144E84510008C755 /* AccountViewController.m */,
+				960A98DF1467AF0D00A530B6 /* RegisterViewController.h */,
+				960A98E01467AF0D00A530B6 /* RegisterViewController.m */,
+				96E56819144E71B80008C755 /* FilterActivitiesViewController.h */,
+				96E5681A144E71B80008C755 /* FilterActivitiesViewController.m */,
+				96E56820144E71B80008C755 /* ViewRecsViewController.h */,
+				96E56821144E71B80008C755 /* ViewRecsViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		96E567F5144E71B80008C755 = {
 			isa = PBXGroup;
 			children = (
@@ -257,28 +296,13 @@
 		96E5680A144E71B80008C755 /* taedium */ = {
 			isa = PBXGroup;
 			children = (
-				96B366381468FCAE00D35E9B /* AccountInfoViewController.h */,
-				96B366391468FCAE00D35E9B /* AccountInfoViewController.m */,
-				96B3663A1468FCAE00D35E9B /* AccountInfoViewController.xib */,
+				96B756B014789BB800BEB681 /* View Controllers */,
 				9620EE491451386B006F78B6 /* Models */,
 				9620EE441451345A006F78B6 /* Utilities */,
+				96B756AF14789B6100BEB681 /* Views */,
 				96E56813144E71B80008C755 /* TaediumAppDelegate.h */,
 				96E56814144E71B80008C755 /* TaediumAppDelegate.m */,
-				96E56816144E71B80008C755 /* MainStoryboard.storyboard */,
-				96FF8209146788E600CCA55B /* Register.xib */,
-				96E56819144E71B80008C755 /* FilterActivitiesViewController.h */,
-				96E5681A144E71B80008C755 /* FilterActivitiesViewController.m */,
-				96E56820144E71B80008C755 /* ViewRecsViewController.h */,
-				96E56821144E71B80008C755 /* ViewRecsViewController.m */,
 				96E5680B144E71B80008C755 /* Supporting Files */,
-				96E56848144E7FBF0008C755 /* AddActivityViewController.h */,
-				96E56849144E7FC00008C755 /* AddActivityViewController.m */,
-				96E5684B144E82860008C755 /* SocialViewController.h */,
-				96E5684C144E82860008C755 /* SocialViewController.m */,
-				96E56850144E84510008C755 /* AccountViewController.h */,
-				96E56851144E84510008C755 /* AccountViewController.m */,
-				960A98DF1467AF0D00A530B6 /* RegisterViewController.h */,
-				960A98E01467AF0D00A530B6 /* RegisterViewController.m */,
 				96B756A91478692F00BEB681 /* GlobalStore.h */,
 				96B756AA1478692F00BEB681 /* GlobalStore.m */,
 			);
